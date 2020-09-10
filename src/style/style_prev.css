@@ -1,0 +1,130 @@
+:root {
+    --header-height: 100px;
+}
+
+/* global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: gainsboro;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: scroll
+}
+
+/* layout grid */
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: auto minmax(auto, 900px) auto;
+    grid-template-rows: var(--header-height) auto 100px;
+    min-height: 100vh;
+}
+.header {
+    grid-row: 1;
+    grid-column: 2 / 3;
+    height: var(--header-height);
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow:         1px 1px 3px 2px rgba(0, 0, 0, 0.4);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    
+}
+.main-container {
+    grid-row: 2;
+    background-color: lightblue;
+    grid-column: 2 / 3;
+}
+
+.footer {
+    grid-row: 3;
+    grid-column: 1 / 4;
+    background-color: greenyellow;
+    height: 100%;
+    margin: 0;
+    width: 100%
+}
+
+.menu-button {
+    background-color: inherit;
+    border: none;
+    color: black;
+    height: 100%;
+}
+
+.menu-button:hover,
+.menu-button:focus{
+    background-color: gold;
+    color: white;
+    border: none;
+    outline: none;
+    
+}
+.menu-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-logo > h1 {
+    margin: 0 10px;
+}
+.menu-logo > h1:before {
+    content: "Kosmetologia ";
+}
+
+
+.menu-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: row;
+        padding-right: 40px;
+        align-items: center;
+    }
+    .menu-logo > h1 {
+        font-size: 1.5em;
+        border: 1px solid black;
+        padding: 2px;
+        border-radius: 50%;
+    }
+    .menu-logo > h1:before {
+        content: "";
+    }
+    :root {
+        --header-height: 50px;
+    }
+  }
+
+/* hamburger icon*/
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(var(--header-height) * 0.7);
+    width: calc(var(--header-height) * 0.7);
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 2px;
+}
+.hamburger-icon:hover{
+    border-color: gold;
+}
+.hamburger-bar{
+    border: 1px solid;
+    border-color: inherit;
+    height: 0.5px;
+    width: 100%;
+    border-radius: 50vh;
+}
