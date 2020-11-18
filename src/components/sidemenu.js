@@ -55,8 +55,8 @@ const SideMenu = React.forwardRef((props, ref) => {
                 <h4>Sprawdź</h4>
             </div>
             <div className="sidemenu-bar">
-                <SideMenuButton linkTo="/" activePage={props.activePage}>O mnie</SideMenuButton>
-                <SideMenuButton linkTo="/salon" activePage={props.activePage}>Salon</SideMenuButton>
+                <SideMenuButton linkTo="/" activePage={props.activePage}>Home</SideMenuButton>
+                <SideMenuButton linkTo="/omnie" activePage={props.activePage}>O mnie</SideMenuButton>
                 <SideMenuButton linkTo="/oferta" activePage={props.activePage}>Oferta</SideMenuButton>
                 <SideMenuButton linkTo="/contact" activePage={props.activePage}>Kontakt</SideMenuButton>
             </div>

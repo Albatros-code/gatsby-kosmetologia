@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Hamburger from "../components/hamburger"
+import  smalllogo from "../images/logo-small.svg"
 
 const MenuButton = (props) => {
     
@@ -16,16 +17,16 @@ const MenuButton = (props) => {
 const MenuBar = React.forwardRef((props,ref) => {
     return(
         <>
-            <div className="menu-logo">
-                <h1>WJ</h1>
+            <div className="menu-small-left">
+                <img src={smalllogo} alt="logo" className={`small-logo ${props.isScrolled ? "small-logo-sticky" : ""}`}/>
             </div>
             <div className="menu-bar">
-                <MenuButton linkTo="/" activePage={props.activePage}>O mnie</MenuButton>
-                <MenuButton linkTo="/salon" activePage={props.activePage}>Salon</MenuButton>
+                <MenuButton linkTo="/" activePage={props.activePage}>Home</MenuButton>
+                <MenuButton linkTo="/omnie" activePage={props.activePage}>O&#160;mnie</MenuButton>
                 <MenuButton linkTo="/oferta" activePage={props.activePage}>Oferta</MenuButton>
                 <MenuButton linkTo="/contact" activePage={props.activePage}>Kontakt</MenuButton>
             </div>
-            <div className="menu-right">
+            <div className="menu-small-right">
                 <Hamburger ref={ref} handleClick={props.handleHamburgerClick}/>
             </div>
         </>
