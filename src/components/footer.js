@@ -17,7 +17,7 @@ const Footer = () => {
 
     return(
         <div className="footer">
-            <p>Page is created by {data.site.siteMetadata.author}</p>
+            <p>{data.site.siteMetadata.author} 2020</p>
         </div>
     )
 }

@@ -77,7 +77,11 @@ const Home = ( { data } ) => {
           />
         </div>
         <div className="section-half-second">
-          No elo
+          <div className="content-container">
+            <h1>Bon na zabieg</h1>
+            <p>Idealny pomysł na prezent. Bon na dowolny zabieg. Elegancko zapakowany.</p>
+            <button className="button" onClick={() => window.location.href='tel:+48791944607'}>Zamów</button>
+          </div>
         </div>
       </div>
     </Layout>

@@ -52,7 +52,7 @@ const SideMenu = React.forwardRef((props, ref) => {
     return(
         <div ref={props.isOpen ? wrapperRef : null}>
             <div className="sidemenu-header">
-                <h4>Sprawdź</h4>
+                <h4>Tu będą zabiegi</h4>
             </div>
             <div className="sidemenu-bar">
                 <SideMenuButton linkTo="/" activePage={props.activePage}>Home</SideMenuButton>
@@ -61,7 +61,7 @@ const SideMenu = React.forwardRef((props, ref) => {
                 <SideMenuButton linkTo="/contact" activePage={props.activePage}>Kontakt</SideMenuButton>
             </div>
             <div className="sidemenu-footer">
-                No elo
+                additional content
             </div>
         </div>
     )
