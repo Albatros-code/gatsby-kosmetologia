@@ -7,7 +7,7 @@
 .main-wrapper {
     display: grid;
     //grid-template-columns: minmax(5%, auto) minmax(auto, 1200px) minmax(5%, auto);
-    grid-template-columns: minmax(0, auto) minmax(auto, 900px) minmax(0, auto);
+    grid-template-columns: minmax(0, auto) minmax(auto, $content-width-base) minmax(0, auto);
     grid-template-rows: $header-height auto $footer-height;
     //grid-template-rows: var(--header-height) auto $footer-height;
     min-height: 100vh;

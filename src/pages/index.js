@@ -35,13 +35,15 @@ const Home = ( { data } ) => {
         </div>
       </div>
       <div className="section-cards">
-          <div className="side-fade">
+          {/* <div className="side-fade">
             <Img
               className="image-bg"
               fluid={data.imageSection3.childImageSharp.fluid}
               //style={{opacity: 0.5}}
             />
-          </div>
+          </div> */}
+          
+          <h1>Przykładowe zabiegi</h1>
           <div className="section-cards-container">
             <PresentationCard
               title="Henna"

@@ -1,5 +1,6 @@
 $header-height-small: 50px;
 $header-height-big: 200px;
+$content-width-base: 900px;
 
 :root {
     --header-height: #{$header-height-small};
@@ -9,10 +10,11 @@ $header-height-big: 200px;
 $primary-color: #d5b5bcff;
 $primary-color-light: scale-color($primary-color, $lightness: +50%);
 $primary-color-dark: scale-color($primary-color, $lightness: -30%, $saturation: -50%);
-$primary-color-superdark: scale-color($primary-color, $lightness: -60%, $saturation: -70%);
+$primary-color-superdark: scale-color($primary-color, $lightness: -70%, $saturation: -70%);
 
 $secondary-color: white;
 
+$breakpoint-screen: 900px;
 $breakpoint-tablet: 768px;
 $breakpoint-phone: 600px;
 
