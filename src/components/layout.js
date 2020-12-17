@@ -107,7 +107,9 @@ const Layout = (props) => {
 
                     <div className="header">
                         <div className="header-big">
-                            <img src={biglogo} alt="logo" className="big-logo"/>
+                            <div className="big-logo">
+                                <img src={biglogo} alt="logo"/>
+                            </div>
                             <div>
                                 <h1>Weronika Jarząb</h1>
                                 <h2>KOSMETOLOGIA </h2>               
@@ -144,9 +146,11 @@ const Footer = ( {data} ) => {
             <div className="footer-left">
                 <div className="text-container">
                     <h2>Adres</h2>
-                    <p>Salon Metamorfoza</p>
-                    <p>Trawowa 34a</p>
-                    <p>54-614 Wrocław</p>
+                    <a href="https://goo.gl/maps/jWizKaHRQy2bPSAbA" target="_blank">
+                        <p>Salon Metamorfoza<br/>
+                        Trawowa 34a<br/>
+                        54-614 Wrocław</p>
+                    </a>
                 </div>
             </div>
             <div className="footer-center">
@@ -159,7 +163,6 @@ const Footer = ( {data} ) => {
                     <a href="mailto:kosmetologia.jarzab@gmail.com" target="_blank"><p><i class="far fa-envelope"></i> kosmetologia.jarzab@gmail.com</p></a>
                     <a href="https:/www.facebook.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-facebook"></i> facebook.com/kosmetologia.jarzab/</p></a>
                     <a href="https://www.instagram.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-instagram"></i> instagram.com/kosmetologia.jarzab/</p></a>
-                    
                 </div>
             </div>
         </div>

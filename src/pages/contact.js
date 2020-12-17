@@ -7,23 +7,54 @@ const contact = ({data}) => {
     return(
         <Layout activePage="contact">
           <div className="main-container-text">
-            <h1>Kontakt</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum in ipsum non pretium. Curabitur egestas, libero eu volutpat volutpat, nisi ante condimentum mi, et viverra ex turpis eget elit. Duis non mauris vel enim cursus rhoncus eu id ex. Praesent a est id tellus consectetur commodo. Quisque eu dui a ante sollicitudin facilisis sit amet nec tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt quis ante eu mattis. Curabitur vehicula purus ac augue consectetur congue. Integer sit amet nulla id lorem elementum vulputate eget eleifend mauris. Vivamus justo magna, gravida id interdum nec, placerat placerat nisi. Phasellus dignissim dolor ut elementum venenatis. Maecenas ipsum libero, venenatis in augue ac, hendrerit laoreet est. Curabitur non tincidunt dolor. Curabitur luctus purus ut lorem mollis ultricies. Curabitur pulvinar euismod augue, blandit convallis eros pharetra in.</p>
-            <Img
-              className="image1"
-              fluid={data.image1.childImageSharp.fluid}
-              alt="There is a face on the picture!"
-            />
-            <Img
-              className="image1"
-              fluid={data.image2.childImageSharp.fluid}
-              alt="There is a face on the picture!"
-            />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum in ipsum non pretium. Curabitur egestas, libero eu volutpat volutpat, nisi ante condimentum mi, et viverra ex turpis eget elit. Duis non mauris vel enim cursus rhoncus eu id ex. Praesent a est id tellus consectetur commodo. Quisque eu dui a ante sollicitudin facilisis sit amet nec tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt quis ante eu mattis. Curabitur vehicula purus ac augue consectetur congue. Integer sit amet nulla id lorem elementum vulputate eget eleifend mauris. Vivamus justo magna, gravida id interdum nec, placerat placerat nisi. Phasellus dignissim dolor ut elementum venenatis. Maecenas ipsum libero, venenatis in augue ac, hendrerit laoreet est. Curabitur non tincidunt dolor. Curabitur luctus purus ut lorem mollis ultricies. Curabitur pulvinar euismod augue, blandit convallis eros pharetra in.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum in ipsum non pretium. Curabitur egestas, libero eu volutpat volutpat, nisi ante condimentum mi, et viverra ex turpis eget elit. Duis non mauris vel enim cursus rhoncus eu id ex. Praesent a est id tellus consectetur commodo. Quisque eu dui a ante sollicitudin facilisis sit amet nec tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt quis ante eu mattis. Curabitur vehicula purus ac augue consectetur congue. Integer sit amet nulla id lorem elementum vulputate eget eleifend mauris. Vivamus justo magna, gravida id interdum nec, placerat placerat nisi. Phasellus dignissim dolor ut elementum venenatis. Maecenas ipsum libero, venenatis in augue ac, hendrerit laoreet est. Curabitur non tincidunt dolor. Curabitur luctus purus ut lorem mollis ultricies. Curabitur pulvinar euismod augue, blandit convallis eros pharetra in.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum in ipsum non pretium. Curabitur egestas, libero eu volutpat volutpat, nisi ante condimentum mi, et viverra ex turpis eget elit. Duis non mauris vel enim cursus rhoncus eu id ex. Praesent a est id tellus consectetur commodo. Quisque eu dui a ante sollicitudin facilisis sit amet nec tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt quis ante eu mattis. Curabitur vehicula purus ac augue consectetur congue. Integer sit amet nulla id lorem elementum vulputate eget eleifend mauris. Vivamus justo magna, gravida id interdum nec, placerat placerat nisi. Phasellus dignissim dolor ut elementum venenatis. Maecenas ipsum libero, venenatis in augue ac, hendrerit laoreet est. Curabitur non tincidunt dolor. Curabitur luctus purus ut lorem mollis ultricies. Curabitur pulvinar euismod augue, blandit convallis eros pharetra in.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum in ipsum non pretium. Curabitur egestas, libero eu volutpat volutpat, nisi ante condimentum mi, et viverra ex turpis eget elit. Duis non mauris vel enim cursus rhoncus eu id ex. Praesent a est id tellus consectetur commodo. Quisque eu dui a ante sollicitudin facilisis sit amet nec tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt quis ante eu mattis. Curabitur vehicula purus ac augue consectetur congue. Integer sit amet nulla id lorem elementum vulputate eget eleifend mauris. Vivamus justo magna, gravida id interdum nec, placerat placerat nisi. Phasellus dignissim dolor ut elementum venenatis. Maecenas ipsum libero, venenatis in augue ac, hendrerit laoreet est. Curabitur non tincidunt dolor. Curabitur luctus purus ut lorem mollis ultricies. Curabitur pulvinar euismod augue, blandit convallis eros pharetra in.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum in ipsum non pretium. Curabitur egestas, libero eu volutpat volutpat, nisi ante condimentum mi, et viverra ex turpis eget elit. Duis non mauris vel enim cursus rhoncus eu id ex. Praesent a est id tellus consectetur commodo. Quisque eu dui a ante sollicitudin facilisis sit amet nec tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt quis ante eu mattis. Curabitur vehicula purus ac augue consectetur congue. Integer sit amet nulla id lorem elementum vulputate eget eleifend mauris. Vivamus justo magna, gravida id interdum nec, placerat placerat nisi. Phasellus dignissim dolor ut elementum venenatis. Maecenas ipsum libero, venenatis in augue ac, hendrerit laoreet est. Curabitur non tincidunt dolor. Curabitur luctus purus ut lorem mollis ultricies. Curabitur pulvinar euismod augue, blandit convallis eros pharetra in.</p>
+            <div className="contact-grid">
+
+              <div className="contact main-container-text">
+                <h1>Kontakt</h1>
+                <p>Umów się na wizytę, darmową konsultację bądź zadaj pytania:</p>
+                <div>
+                  <a href="tel:+48517977667" target="_blank"><p><i class="fas fa-phone"></i> 517 977 667</p></a>
+                  <a href="mailto:kosmetologia.jarzab@gmail.com" target="_blank"><p><i class="far fa-envelope"></i> kosmetologia.jarzab@gmail.com</p></a>
+                  <a href="https:/www.facebook.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-facebook"></i> facebook.com/kosmetologia.jarzab/</p></a>
+                  <a href="https://www.instagram.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-instagram"></i> instagram.com/kosmetologia.jarzab/</p></a>
+                </div>
+              </div>
+
+              <div className="opening-hours main-container-text">
+                <h1>Godziny otwarcia</h1>
+                <div className="main-container-text">
+                  <i class="far fa-clock"></i>
+                  <p>poniedziałek - piątek:<br/>9:00 - 20:00</p>
+                </div>
+              </div>
+
+              
+              <div className="adress-text">
+                <div className="main-container-text">
+                  <h1>Adres</h1>
+                  <div className="adress-icon-container">
+                    <div><i class="fas fa-map-marker-alt"></i></div>
+                    <div className=" main-container-text">
+                      <p>Salon Metamorfoza<br/>
+                      ul. Trawowa 34a<br/>
+                      54-614 Wrocław</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div className="adress-map">
+                <iframe
+                  className="map"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1116.068397498634!2d16.94910926898883!3d51.09943784127408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5a036bd4c37084ab!2sKosmetologia%20Weronika%20Jarz%C4%85b!5e0!3m2!1spl!2spl!4v1608218315476!5m2!1spl!2spl"
+                  frameborder="0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+
+            </div>
           </div>
         </Layout>
     )
