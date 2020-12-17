@@ -6,6 +6,8 @@ import "../style/style.scss"
 import SideMenu from "./sidemenu"
 import { Helmet } from 'react-helmet'
 import  biglogo from "../images/logo-small.svg"
+//import facebookLogo from "../images/icons/f_logo_RGB-Black_58.png"
+import facebookLogo from "../images/icons/f_logo_RGB-White_58.png"
 
 const headerHeight = 150;
 const breakpointPhone = 600;
@@ -92,6 +94,7 @@ const Layout = (props) => {
         <Helmet>
         <meta charSet="utf-8" />
         <title>{title}</title>
+        <script src="https://kit.fontawesome.com/24e2ae8a83.js" crossorigin="anonymous"></script>
         </Helmet>
 
         { isLoaded ?
@@ -138,7 +141,27 @@ const Footer = ( {data} ) => {
 
     return(
         <div className="footer">
-            <p>{data.site.siteMetadata.author} 2020</p>
+            <div className="footer-left">
+                <div className="text-container">
+                    <h2>Adres</h2>
+                    <p>Salon Metamorfoza</p>
+                    <p>Trawowa 34a</p>
+                    <p>54-614 Wrocław</p>
+                </div>
+            </div>
+            <div className="footer-center">
+                <h1>&copy; 2020 Weronika Jarzab Kosmetologia</h1>
+            </div>
+            <div className="footer-right">
+                <div className="text-container">
+                    <h2>Kontakt</h2>
+                    <a href="tel:+48517977667" target="_blank"><p><i class="fas fa-phone"></i> 517 977 667</p></a>
+                    <a href="mailto:kosmetologia.jarzab@gmail.com" target="_blank"><p><i class="far fa-envelope"></i> kosmetologia.jarzab@gmail.com</p></a>
+                    <a href="https:/www.facebook.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-facebook"></i> facebook.com/kosmetologia.jarzab/</p></a>
+                    <a href="https://www.instagram.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-instagram"></i> instagram.com/kosmetologia.jarzab/</p></a>
+                    
+                </div>
+            </div>
         </div>
     )
 }
