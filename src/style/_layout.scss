@@ -314,8 +314,13 @@
 
     p {
         font-weight: 100;
-        margin: 0;
-        font-size: 0.8rem;
+            //margin: 0;
+            font-size: 1rem;
+        @media screen and (min-width: $breakpoint-phone) {
+            margin: 0;
+            //font-size: 0.8rem;
+        }
+            
     }
 
     h1 {
