@@ -1,5 +1,8 @@
-$section-height: calc(100vh - #{$header-height-small});
-
+$section-height-ref: "100vh - #{$header-height-small}";
+$section-height-first-ref: "100vh - #{$header-height-big}";
+$section-height: calc(#{$section-height-ref});
+$section-height-first: calc(#{$section-height-first-ref});
+$section-height-min: 500px;
 // common features
 
 @mixin full-width-background ($color) {
@@ -23,7 +26,8 @@ $section-height: calc(100vh - #{$header-height-small});
     left:50%;
     transform: translateX(-50%);
     height: 100%;
-    width: calc(100% + 400px);
+    //width: calc(100% + 400px);
+    width: calc(2 * #{$section-height-ref});
     &:before {
         content: "";
         position: absolute;
@@ -80,12 +84,164 @@ $section-height: calc(100vh - #{$header-height-small});
     transform: translateX(-50%);  
   }
 
+ // first section
+.first-section {
+    min-height: $section-height-min;
+    height: $section-height;
+    @media screen and (min-width: $breakpoint-phone) {
+        height: $section-height-first;
+    }
+    position: relative;
 
-  // first section
+    &-left{
+        height: 50%;
+        width:100vw;
+        position: absolute;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            height: 100%;
+            width:50vw;
+            left: 50%;
+            transform: translateX(-50vw);
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-container {
+            width: 75%;
+            max-width: 700px;
+            //background-color: $primary-color-light;
+            //padding: 50px;
+            
+            // >div:first-child {
+            //     width: 700px;
+            // }
+
+            >div:first-child {
+                display: flex;
+                flex-direction: row;
+            }
+
+            h1 {
+                display: inline-block;
+                font-weight: 100;
+                text-transform: uppercase;
+                color: $primary-color-superdark;
+                margin-left: 15px;
+                &:before {
+                    position: absolute;
+                    display: inline-block;
+                    content: "";
+                    border-right: .3rem solid $primary-color-dark;
+                    width: 0px;
+                    height: 1em;
+                    transform: translateY(0.15em) translateX(-15px);
+                }
+            }
+
+            @media screen and (min-width: $breakpoint-phone) {
+                h1 {
+                    font-size: 2.6rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+            @media screen and (min-width: $breakpoint-tablet) {
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+            @media screen and (min-width: $breakpoint-screen) {
+                h1 {
+                    font-size: 3vw ;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+    }
+
+    &-right{
+        height: 50%;
+        width:100vw;
+        top: 50%;
+        position: absolute;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            height: 100%;
+            width: 50vw;
+            left: 50%;
+            top: 0%;    
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 10px;
+        }
+        >div {
+            max-width: 700px;
+
+            $height1: "(#{$section-height-ref}) * 0.5";
+            $height2: "#{$section-height-min} * 0.5";
+            $height: "Max((#{$height1}), #{$height2} )";
+            $width: 100%;
+            width: Min(#{$width}, (#{$height}) * 0.9);
+            //width: min(100%, (max(calc(#{$section-height-min} * 0.5), calc(#{$section-height-first} * 0.5)) * 0.95));
+
+            @media screen and (min-width: $breakpoint-phone) {
+                $height1: "(#{$section-height-first-ref}) * 0.5";
+                $height2: "#{$section-height-min} * 0.5";
+                $height: "Max((#{$height1}), #{$height2} )";
+                $width: 100%;
+                width: Min(#{$width}, (#{$height}) * 0.9);
+            }
+            @media screen and (min-width: $breakpoint-tablet) {
+                $string: "Max(#{$section-height-min}, #{$section-height-ref}) * 0.75";
+                width: Min(100% * 0.75, #{$string});
+            }
+
+            >div {
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%;
+                
+                >.image {
+                    position: absolute!important;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    //height: 100%;
+                    border-radius: 50%;
+                    filter: saturate(125%);
+                    filter: contrast(125%);
+                    background-color: $primary-color;
+                    border: 3px solid $primary-color;
+                }
+           }
+        }      
+    }
+}
+
+
+// presentation bar
 
 .presentation-bar {
-    height:calc(100vh - var(--header-height));
-    @include full-width-background($primary-color-superdark);
+    min-height: $section-height-min;
+    height: $section-height;
+    @include full-width-background($primary-color);
 }
 
 .presentation-bar-main{
@@ -98,26 +254,26 @@ $section-height: calc(100vh - #{$header-height-small});
     transition-timing-function: ease-in-out;  
 
     div.side-fade{
-        @include side-fade($primary-color-superdark);
+        @include side-fade($primary-color);
     }
     &-container {
-        // position: absolute;
-        // left:50%;
-        // top:0;
-        // width: 100%;
-        // height: 100%;
-        // max-width: 90%;
-        // transform: translateX(-50%);
         @include section-content-container
     }
 
     p {
-        color: $primary-color-light;
+        color: white;
         margin: 0px
     }
 
+    .slideshow-image {
+        filter: brightness(120%);
+        opacity: 0.5;
+        //filter: saturate(50%);
+        //filter: grayscale(50%);
+    }
+
     .title {
-        background-color: scale-color($primary-color-superdark, $alpha: -15%);
+        background-color: scale-color($primary-color-superdark, $alpha: -5%);
         position: absolute;
         font-variant: small-caps;
         font-weight: 100;
@@ -142,7 +298,7 @@ $section-height: calc(100vh - #{$header-height-small});
     }
 
     .bottom-section {
-        background-color: scale-color($primary-color-superdark, $alpha: -15%);
+        background-color: scale-color($primary-color-superdark, $alpha: -5%);
         position: absolute;
         padding: 5px;
         bottom: 60px;
@@ -195,12 +351,12 @@ $section-height: calc(100vh - #{$header-height-small});
     margin: 0 25px;
     border-radius: 50%;
     border: 0px;
-    background-color: scale-color($primary-color-superdark, $alpha: -15%);
+    background-color: scale-color($primary-color-superdark, $alpha: -5%);
     transition: background-color 0.5s;
     transition-timing-function: ease-in-out;
     &:hover {
         cursor: pointer;
-        background: scale-color($primary-color-dark, $alpha: -15%);
+        background: scale-color($primary-color-dark, $alpha: -5%);
     }
     &:hover, 
     &:focus {
@@ -218,6 +374,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .section-two {
+    min-height: $section-height-min;
     height: $section-height;
     background: white;
     @include full-width-background($primary-color-light);
@@ -301,6 +458,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .section-cards {
+    min-height: $section-height-min;
     min-height: $section-height;
     position: relative;
     display: flex;
@@ -340,6 +498,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .card-container {
+    min-height: $section-height-min;
     width: 25%;
     min-width: 250px;
     background-color: white;
@@ -370,6 +529,7 @@ $section-height: calc(100vh - #{$header-height-small});
         width: calc(100% + 50px);
         margin: 0px;
         height: 150px;
+        background-color: $primary-color;
         border: 3px solid $primary-color;
         //position: relative;
         //transform: translateX(-5%);
@@ -409,6 +569,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .section-half {
+    min-height: $section-height-min;
     min-height: $section-height;
     position: relative;
     display: flex;

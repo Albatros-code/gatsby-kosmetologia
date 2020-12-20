@@ -6,8 +6,6 @@ import "../style/style.scss"
 import SideMenu from "./sidemenu"
 import { Helmet } from 'react-helmet'
 import  biglogo from "../images/logo-small.svg"
-//import facebookLogo from "../images/icons/f_logo_RGB-Black_58.png"
-import facebookLogo from "../images/icons/f_logo_RGB-White_58.png"
 
 const headerHeight = 150;
 const breakpointPhone = 600;
@@ -146,7 +144,7 @@ const Footer = ( {data} ) => {
             <div className="footer-left">
                 <div className="text-container">
                     <h2>Adres</h2>
-                    <a href="https://goo.gl/maps/jWizKaHRQy2bPSAbA" target="_blank">
+                    <a href="https://goo.gl/maps/jWizKaHRQy2bPSAbA" target="_blank"  rel="noreferrer">
                         <p>Salon Metamorfoza<br/>
                         Trawowa 34a<br/>
                         54-614 Wrocław</p>
@@ -159,10 +157,10 @@ const Footer = ( {data} ) => {
             <div className="footer-right">
                 <div className="text-container">
                     <h2>Kontakt</h2>
-                    <a href="tel:+48517977667" target="_blank"><p><i class="fas fa-phone"></i> 517 977 667</p></a>
-                    <a href="mailto:kosmetologia.jarzab@gmail.com" target="_blank"><p><i class="far fa-envelope"></i> kosmetologia.jarzab@gmail.com</p></a>
-                    <a href="https:/www.facebook.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-facebook"></i> facebook.com/kosmetologia.jarzab/</p></a>
-                    <a href="https://www.instagram.com/kosmetologia.jarzab/" target="_blank"><p><i class="fab fa-instagram"></i> instagram.com/kosmetologia.jarzab/</p></a>
+                    <a href="tel:+48517977667" target="_blank" rel="noreferrer"><p><i className="fas fa-phone"></i> 517 977 667</p></a>
+                    <a href="mailto:kosmetologia.jarzab@gmail.com" target="_blank" rel="noreferrer"><p><i className="far fa-envelope"></i> kosmetologia.jarzab@gmail.com</p></a>
+                    <a href="https:/www.facebook.com/kosmetologia.jarzab/" target="_blank" rel="noreferrer"><p><i className="fab fa-facebook"></i> facebook.com/kosmetologia.jarzab/</p></a>
+                    <a href="https://www.instagram.com/kosmetologia.jarzab/" target="_blank" rel="noreferrer"><p><i className="fab fa-instagram"></i> instagram.com/kosmetologia.jarzab/</p></a>
                 </div>
             </div>
         </div>

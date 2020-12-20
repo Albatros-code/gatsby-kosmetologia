@@ -13,15 +13,36 @@ const Home = ( { data } ) => {
 
   return (
     <Layout activePage="">
+      <div className="first-section">
+        <div className="first-section-left">
+          <div className="first-section-left-container">
+            <div>
+              <h1>Zadbaj o siebie!</h1>
+            </div>
+            <p>Cała gama profesjonalnych zabiegów pozwolą Ci cieszyć się pięknym i zdrowym wyglądem.</p>
+            <p>Nie wiesz co wybrać? Umów się na darmowy dobór Twojej pielęgnacji.</p>
+            <p align="right">Zapraszam do salonu!<br/>Weronika Jarząb</p>
+          </div>
+        </div>
+        <div className="first-section-right">
+          <div>
+            <div>
+              {/* <img src={firstSectionImage}/> */}
+              <Img
+                fluid={data.firstSectionImage.childImageSharp.fluid}
+                className="image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <PresentationBar images={data} slides={slides}/>
       <div className="section-two">
         <div className="side-fade">
           <Img
             className="image-bg"
             fluid={data.imageSection2.childImageSharp.fluid}
-            //style={{opacity: 0.5}}
-            //fluid={props.image
-            //image: props.images.image3.childImageSharp.fluid,
+            
           />
         </div>
         <div className="section-two-container">
@@ -152,12 +173,9 @@ const PresentationBarSlide = (props) => {
     <div className={`presentation-bar-main ${props.active ? "active" : ""}`} >
       <div className="side-fade">
         <Img
-          className="image-bg"
+          className="image-bg slideshow-image"
           fluid={props.image}
-          //style={{ height: "100%", width: "100%" }}
-          imgStyle={{ objectFit: "cover" }}
-          //fluid={props.image}
-          //image: props.images.image3.childImageSharp.fluid,
+          imgStyle={{ objectFit: "cover"}}
         />
       </div>
       <div className="presentation-bar-main-container">
@@ -204,8 +222,8 @@ const PresentationCard = (props) => {
       <div className="card-image">
         <Img
           className="image-bg"
-          // className="image-bg"
           fluid={props.image}
+          style={{objectFit:"cover"}}
         />
       </div>
       <p className="comment">
@@ -218,39 +236,72 @@ const PresentationCard = (props) => {
 
 export default Home
 
+// export const image = graphql`
+// fragment images on File {
+//   childImageSharp {
+//     fluid(maxWidth: 2000) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// `
+
 export const image = graphql`
 fragment images on File {
   childImageSharp {
-    fluid(maxWidth: 2000, quality: 100) {
+    fluid(maxWidth: 2000) {
       ...GatsbyImageSharpFluid
-      ...GatsbyImageSharpFluidLimitPresentationSize
+    }
+  }
+}
+
+fragment cardImage on File {
+  childImageSharp {
+    fluid(maxWidth: 800) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+
+fragment backgroundImage on File {
+  childImageSharp {
+    fluid(sizes: "(max-width: 1000px) calc(2 * 100vw), 2000px") {
+      ...GatsbyImageSharpFluid
     }
   }
 }
 `
 
+
 export const data = graphql`
 query {
+  firstSectionImage: file(relativePath: { eq: "images/others/homepage-first-section.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 1000, srcSetBreakpoints:[50, 100, 200, 400, 600, 800]) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   image1: file(relativePath: { eq: "images/slides/image1.jpg" }) {
-    ...images
+    ...backgroundImage
   }
   image2: file(relativePath: { eq: "images/slides/image2.jpg" }) {
-    ...images
+    ...backgroundImage
   }
   image3: file(relativePath: { eq: "images/wellness.jpg" }) {
-    ...images
+    ...backgroundImage
   }
   cardImage1: file(relativePath: { eq: "images/cards/image1.jpg" }) {
-    ...images
+    ...cardImage
   }
   cardImage2: file(relativePath: { eq: "images/cards/image2.jpg" }) {
-    ...images
+    ...cardImage
   }
   cardImage3: file(relativePath: { eq: "images/cards/image3.jpg" }) {
-    ...images
+    ...cardImage
   }
   imageSection2: file(relativePath: { eq: "images/others/homepage-bar-1.jpg" }) {
-    ...images
+    ...backgroundImage
   }
   imageSection3: file(relativePath: { eq: "images/others/homepage-bar-2.jpg" }) {
     ...images
