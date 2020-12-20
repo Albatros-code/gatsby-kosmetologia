@@ -1,5 +1,6 @@
 $section-height: calc(100vh - #{$header-height-small});
-
+$section-height-first: calc(100vh - var(--header-height));
+$section-height-min: 500px;
 // common features
 
 @mixin full-width-background ($color) {
@@ -23,7 +24,8 @@ $section-height: calc(100vh - #{$header-height-small});
     left:50%;
     transform: translateX(-50%);
     height: 100%;
-    width: calc(100% + 400px);
+    //width: calc(100% + 400px);
+    width: calc(2 * #{$section-height});
     &:before {
         content: "";
         position: absolute;
@@ -80,12 +82,110 @@ $section-height: calc(100vh - #{$header-height-small});
     transform: translateX(-50%);  
   }
 
+ // first section
+.first-section {
+    min-height: $section-height-min;
+    height: $section-height-first;
+    position: relative;
 
-  // first section
+    &-left{
+        height: 50%;
+        width:100vw;
+        position: absolute;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        @media screen and (min-width: $breakpoint-phone) {
+            height: 100%;
+            width:50vw;
+            left: 50%;
+            transform: translateX(-50vw);
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-container {
+            width: 75%;
+            max-width: 400px;
+            //background-color: $primary-color-light;
+            //padding: 50px;
+            h1 {
+                font-weight: 100;
+                text-transform: uppercase;
+                color: $primary-color-superdark;
+                &:before {
+                    display: inline-block;
+                    content: "";
+                    border-right: .3rem solid $primary-color-dark;
+                    width: 10px;
+                    height: 1em;
+                    margin: 0 0.5rem;
+                    transform: translateY(0.15em);   
+                }
+            }
+
+        }
+
+    }
+
+    &-right{
+        height: 50%;
+        width:100vw;
+        top: 50%;
+        position: absolute;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        @media screen and (min-width: $breakpoint-phone) {
+            height: 100%;
+            width: 50vw;
+            left: 50%;
+            top: 0%;    
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 10px;
+        }
+        >div{
+            width: calc(min(100%, max(calc(#{$section-height-min} / 2), calc(#{$section-height-first}/2))*0.95));
+
+            @media screen and (min-width: $breakpoint-phone) {
+                width: calc(min(100%, max(#{$section-height-min}, #{$section-height-first}))*0.75);
+            }
+
+            >div {
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%;
+                
+                >.image {
+                    position: absolute!important;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    //height: 100%;
+                    border-radius: 50%;
+                    filter: saturate(125%);
+                    filter: contrast(125%);
+                    background-color: $primary-color;
+                    border: 3px solid $primary-color;
+                }
+           }
+        }      
+    }
+}
+
+
+// presentation bar
 
 .presentation-bar {
-    height:calc(100vh - var(--header-height));
-    @include full-width-background($primary-color-superdark);
+    min-height: $section-height-min;
+    height: $section-height;
+    @include full-width-background($primary-color);
 }
 
 .presentation-bar-main{
@@ -98,22 +198,21 @@ $section-height: calc(100vh - #{$header-height-small});
     transition-timing-function: ease-in-out;  
 
     div.side-fade{
-        @include side-fade($primary-color-superdark);
+        @include side-fade($primary-color);
     }
     &-container {
-        // position: absolute;
-        // left:50%;
-        // top:0;
-        // width: 100%;
-        // height: 100%;
-        // max-width: 90%;
-        // transform: translateX(-50%);
         @include section-content-container
     }
 
     p {
-        color: $primary-color-light;
+        color: white;
         margin: 0px
+    }
+
+    .slideshow-image {
+        opacity: 50%;
+        //filter: saturate(50%);
+        //filter: grayscale(50%);
     }
 
     .title {
@@ -195,7 +294,7 @@ $section-height: calc(100vh - #{$header-height-small});
     margin: 0 25px;
     border-radius: 50%;
     border: 0px;
-    background-color: scale-color($primary-color-superdark, $alpha: -15%);
+    background-color: scale-color($primary-color, $alpha: -15%);
     transition: background-color 0.5s;
     transition-timing-function: ease-in-out;
     &:hover {
@@ -218,6 +317,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .section-two {
+    min-height: $section-height-min;
     height: $section-height;
     background: white;
     @include full-width-background($primary-color-light);
@@ -301,6 +401,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .section-cards {
+    min-height: $section-height-min;
     min-height: $section-height;
     position: relative;
     display: flex;
@@ -340,6 +441,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .card-container {
+    min-height: $section-height-min;
     width: 25%;
     min-width: 250px;
     background-color: white;
@@ -370,6 +472,7 @@ $section-height: calc(100vh - #{$header-height-small});
         width: calc(100% + 50px);
         margin: 0px;
         height: 150px;
+        background-color: $primary-color;
         border: 3px solid $primary-color;
         //position: relative;
         //transform: translateX(-5%);
@@ -409,6 +512,7 @@ $section-height: calc(100vh - #{$header-height-small});
 }
 
 .section-half {
+    min-height: $section-height-min;
     min-height: $section-height;
     position: relative;
     display: flex;

@@ -6,8 +6,8 @@
 
 
 module.exports = {
-  pathPrefix: "/gatsby-kosmetologia",
-  //pathPrefix: "/",
+  //pathPrefix: "/gatsby-kosmetologia",
+  pathPrefix: "/",
   siteMetadata: {
     title: 'WJ Kosmetologia',
     author: 'Albatros­'
