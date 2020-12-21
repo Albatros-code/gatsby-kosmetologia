@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 $section-height-ref: "100vh - #{$header-height-small}";
 $section-height-first-ref: "100vh - #{$header-height-big}";
 $section-height: calc(#{$section-height-ref});
 $section-height-first: calc(#{$section-height-first-ref});
-=======
-$section-height: calc(100vh - #{$header-height-small});
-$section-height-first: calc(100vh - var(--header-height));
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
 $section-height-min: 500px;
 // common features
 
@@ -32,11 +27,7 @@ $section-height-min: 500px;
     transform: translateX(-50%);
     height: 100%;
     //width: calc(100% + 400px);
-<<<<<<< HEAD
     width: calc(2 * #{$section-height-ref});
-=======
-    width: calc(2 * #{$section-height});
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
     &:before {
         content: "";
         position: absolute;
@@ -96,14 +87,10 @@ $section-height-min: 500px;
  // first section
 .first-section {
     min-height: $section-height-min;
-<<<<<<< HEAD
     height: $section-height;
     @media screen and (min-width: $breakpoint-phone) {
         height: $section-height-first;
     }
-=======
-    height: $section-height-first;
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
     position: relative;
 
     &-left{
@@ -115,11 +102,7 @@ $section-height-min: 500px;
         align-items: flex-end;
         justify-content: center;
 
-<<<<<<< HEAD
         @media screen and (min-width: $breakpoint-tablet) {
-=======
-        @media screen and (min-width: $breakpoint-phone) {
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
             height: 100%;
             width:50vw;
             left: 50%;
@@ -130,7 +113,6 @@ $section-height-min: 500px;
 
         &-container {
             width: 75%;
-<<<<<<< HEAD
             max-width: 700px;
             //background-color: $primary-color-light;
             //padding: 50px;
@@ -195,45 +177,11 @@ $section-height-min: 500px;
         top: 50%;
         position: absolute;
 
-=======
-            max-width: 400px;
-            //background-color: $primary-color-light;
-            //padding: 50px;
-            h1 {
-                font-weight: 100;
-                text-transform: uppercase;
-                color: $primary-color-superdark;
-                &:before {
-                    display: inline-block;
-                    content: "";
-                    border-right: .3rem solid $primary-color-dark;
-                    width: 10px;
-                    height: 1em;
-                    margin: 0 0.5rem;
-                    transform: translateY(0.15em);   
-                }
-            }
-
-        }
-
-    }
-
-    &-right{
-        height: 50%;
-        width:100vw;
-        top: 50%;
-        position: absolute;
-
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
         display: flex;
         align-items: flex-start;
         justify-content: center;
 
-<<<<<<< HEAD
         @media screen and (min-width: $breakpoint-tablet) {
-=======
-        @media screen and (min-width: $breakpoint-phone) {
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
             height: 100%;
             width: 50vw;
             left: 50%;
@@ -242,7 +190,6 @@ $section-height-min: 500px;
             justify-content: flex-start;
             padding-left: 10px;
         }
-<<<<<<< HEAD
         >div {
             max-width: 700px;
 
@@ -263,13 +210,6 @@ $section-height-min: 500px;
             @media screen and (min-width: $breakpoint-tablet) {
                 $string: "Max(#{$section-height-min}, #{$section-height-ref}) * 0.75";
                 width: Min(100% * 0.75, #{$string});
-=======
-        >div{
-            width: calc(min(100%, max(calc(#{$section-height-min} / 2), calc(#{$section-height-first}/2))*0.95));
-
-            @media screen and (min-width: $breakpoint-phone) {
-                width: calc(min(100%, max(#{$section-height-min}, #{$section-height-first}))*0.75);
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
             }
 
             >div {
@@ -326,12 +266,8 @@ $section-height-min: 500px;
     }
 
     .slideshow-image {
-<<<<<<< HEAD
         filter: brightness(120%);
         opacity: 0.5;
-=======
-        opacity: 50%;
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
         //filter: saturate(50%);
         //filter: grayscale(50%);
     }
@@ -415,11 +351,7 @@ $section-height-min: 500px;
     margin: 0 25px;
     border-radius: 50%;
     border: 0px;
-<<<<<<< HEAD
     background-color: scale-color($primary-color-superdark, $alpha: -5%);
-=======
-    background-color: scale-color($primary-color, $alpha: -15%);
->>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
     transition: background-color 0.5s;
     transition-timing-function: ease-in-out;
     &:hover {

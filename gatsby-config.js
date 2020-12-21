@@ -1,13 +1,6 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 
 module.exports = {
-  //pathPrefix: "/gatsby-kosmetologia",
-  pathPrefix: "/",
+  pathPrefix: process.env.GHPAGES ? "/gatsby-kosmetologia" : "/",
   siteMetadata: {
     title: 'WJ Kosmetologia',
     author: 'Albatros­'
