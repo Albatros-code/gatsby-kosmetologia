@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import slidesData from "../data/slides"
+import firstSectionImage from "../images/others/homepage-first-section.jpg"
 
 const Home = ( { data } ) => {
   const slides = slidesData.map((slide, index) => ({
@@ -16,9 +17,13 @@ const Home = ( { data } ) => {
       <div className="first-section">
         <div className="first-section-left">
           <div className="first-section-left-container">
+<<<<<<< HEAD
             <div>
               <h1>Zadbaj o siebie!</h1>
             </div>
+=======
+            <h1>Zadbaj o siebie!</h1>
+>>>>>>> 5c815d29555aeb07c112324687d33f7863fa6ef2
             <p>Cała gama profesjonalnych zabiegów pozwolą Ci cieszyć się pięknym i zdrowym wyglądem.</p>
             <p>Nie wiesz co wybrać? Umów się na darmowy dobór Twojej pielęgnacji.</p>
             <p align="right">Zapraszam do salonu!<br/>Weronika Jarząb</p>
