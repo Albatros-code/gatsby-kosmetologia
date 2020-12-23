@@ -1,4 +1,5 @@
 
+
 module.exports = {
   pathPrefix: process.env.GHPAGES ? "/gatsby-kosmetologia" : "/",
   siteMetadata: {
@@ -8,12 +9,26 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    //`gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/`,
+        name: 'images',
+        path: `${__dirname}/src/images`,
+        plugins: [
+          `gatsby-plugin-sharp`,
+          `gatsby-transformer-sharp`,
+        ]
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data`,
+        plugins: [
+          `gatsby-transformer-json`
+        ]
       },
     },
   ],
@@ -23,3 +38,5 @@ module.exports = {
 // {
 //   plugins: [`gatsby-plugin-react-helmet`],
 // }
+
+//`gatsby-transformer-json`,

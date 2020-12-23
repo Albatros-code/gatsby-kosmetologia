@@ -1,0 +1,129 @@
+
+.ofert-table {
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 0px;
+    width: 100%;
+    //border: 2px solid black;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+
+    table, tbody, tr, td {
+        border-collapse: collapse;
+    }
+
+    // >table>tbody {
+    //     >tr:first-of-type > td:first-of-type {
+    //         background-color: lightgreen;
+    //         border-radius: 20px 20px 0 0;
+    //     }
+    
+    //     >tr:last-of-type > td:last-of-type {
+    //         background-color: lightgreen;
+    //         border-radius: 0 0 20px 20px;
+    //     }
+    // }
+
+
+    button {
+        display: inline-block;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 0;
+        text-decoration: none;
+        background-color: inherit;
+        color: #aaa;
+        font-family: sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out,
+                    //transform 150ms ease
+                    ;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        &:hover,
+        &:focus {
+            color: #555;
+            background-color: #ddd;
+        }
+        
+        &:focus {
+            outline: 1px solid #fff;
+            outline-offset: -4px;
+        }
+        
+        &:active {
+            transform: scale(0.99);
+        }
+        
+    }
+    
+
+    >table {
+        border-spacing: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    &-tr {
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        position: relative;
+        background-color: white;
+        transition: background-color 500ms ease, 
+                    transform 150ms ease,
+                    position 1000ms ease;
+        &:hover {
+            //background-color: #eee; 
+        }
+
+        &-header {
+            background-color: #eee;
+        }
+    }
+
+
+
+    &-td {
+        padding: 15px;
+    }
+
+    .drawer-button {
+        padding: 5px;
+        height: 25px;
+        width: 25px;
+        float: right;
+        border-radius: 50%;
+
+        &-rotated {
+            transform: rotate(180deg);
+        }
+    }
+
+    .inner-table {
+        width: 100%;
+    }
+    
+    .inner-content-row {
+        height: 100%;
+    }
+
+    .inner-content-td {
+        padding: 0px;
+    }
+
+    .inner-content-close {
+        //height: 100%;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    .inner-content-open {
+        max-height: 100px;
+    }
+}
+

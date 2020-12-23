@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import slidesData from "../data/slides"
-import firstSectionImage from "../images/others/homepage-first-section.jpg"
 
 const Home = ( { data } ) => {
   const slides = slidesData.map((slide, index) => ({
@@ -276,38 +275,38 @@ fragment backgroundImage on File {
 
 export const data = graphql`
 query {
-  firstSectionImage: file(relativePath: { eq: "images/others/homepage-first-section.jpg" }) {
+  firstSectionImage: file(relativePath: { eq: "others/homepage-first-section.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 1000, srcSetBreakpoints:[50, 100, 200, 400, 600, 800]) {
         ...GatsbyImageSharpFluid
       }
     }
   }
-  image1: file(relativePath: { eq: "images/slides/image1.jpg" }) {
+  image1: file(relativePath: { eq: "slides/image1.jpg" }) {
     ...backgroundImage
   }
-  image2: file(relativePath: { eq: "images/slides/image2.jpg" }) {
+  image2: file(relativePath: { eq: "slides/image2.jpg" }) {
     ...backgroundImage
   }
-  image3: file(relativePath: { eq: "images/wellness.jpg" }) {
+  image3: file(relativePath: { eq: "wellness.jpg" }) {
     ...backgroundImage
   }
-  cardImage1: file(relativePath: { eq: "images/cards/image1.jpg" }) {
+  cardImage1: file(relativePath: { eq: "cards/image1.jpg" }) {
     ...cardImage
   }
-  cardImage2: file(relativePath: { eq: "images/cards/image2.jpg" }) {
+  cardImage2: file(relativePath: { eq: "cards/image2.jpg" }) {
     ...cardImage
   }
-  cardImage3: file(relativePath: { eq: "images/cards/image3.jpg" }) {
+  cardImage3: file(relativePath: { eq: "cards/image3.jpg" }) {
     ...cardImage
   }
-  imageSection2: file(relativePath: { eq: "images/others/homepage-bar-1.jpg" }) {
+  imageSection2: file(relativePath: { eq: "others/homepage-bar-1.jpg" }) {
     ...backgroundImage
   }
-  imageSection3: file(relativePath: { eq: "images/others/homepage-bar-2.jpg" }) {
+  imageSection3: file(relativePath: { eq: "others/homepage-bar-2.jpg" }) {
     ...images
   }
-  imageSection4: file(relativePath: { eq: "images/others/homepage-bar-3.jpg" }) {
+  imageSection4: file(relativePath: { eq: "others/homepage-bar-3.jpg" }) {
     ...images
   }
 }

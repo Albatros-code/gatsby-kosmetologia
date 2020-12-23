@@ -51,7 +51,7 @@ fragment imageBig on File {
 
 export const data = graphql`
 query {
-  image1: file(relativePath: { eq: "images/ryj.jpg" }) {
+  image1: file(relativePath: { eq: "ryj.jpg" }) {
     ...imageBig
   }
 }
