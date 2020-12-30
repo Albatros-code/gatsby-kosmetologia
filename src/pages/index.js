@@ -27,7 +27,6 @@ const Home = ( { data } ) => {
         <div className="first-section-right">
           <div>
             <div>
-              {/* <img src={firstSectionImage}/> */}
               <Img
                 fluid={data.firstSectionImage.childImageSharp.fluid}
                 className="image"
@@ -55,15 +54,7 @@ const Home = ( { data } ) => {
           </div>
         </div>
       </div>
-      <div className="section-cards">
-          {/* <div className="side-fade">
-            <Img
-              className="image-bg"
-              fluid={data.imageSection3.childImageSharp.fluid}
-              //style={{opacity: 0.5}}
-            />
-          </div> */}
-          
+      <div className="section-cards">          
           <h1>Przykładowe zabiegi</h1>
           <div className="section-cards-container">
             <PresentationCard
@@ -88,7 +79,6 @@ const Home = ( { data } ) => {
             >
               Zadbaj o swoje nogi. Pedicure to nie tylko ładne paznokcie, ale także zdrowa skóra stóp.
             </PresentationCard>
-
           </div>
       </div>
       <div className="section-half">
@@ -123,7 +113,6 @@ const PresentationBar = ( props ) => {
 
     
     const intervals = setInterval(changeSlides, 3000);
-    //const intervals = null;
 
     if (shifting === false) {
       clearInterval(intervals)

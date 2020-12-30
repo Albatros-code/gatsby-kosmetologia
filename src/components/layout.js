@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import MenuBar from "./menu"
 //import "../style/style.css"
 import "../style/style.scss"
-import SideMenu from "./sidemenu"
 import { Helmet } from 'react-helmet'
 import  biglogo from "../images/logo-small.svg"
 
@@ -99,10 +98,9 @@ const Layout = (props) => {
             <>
                 <div className={`sidemenu-background ${isOpenSideMenu ? "sidemenu-open" : ""}`}></div>
                 <div className="main-wrapper">
-                    <div className={`sidemenu-container ${isOpenSideMenu ? "sidemenu-open" : ""}`}>
+                    {/* <div className={`sidemenu-container ${isOpenSideMenu ? "sidemenu-open" : ""}`}>
                         <SideMenu ref={ref} isOpen={isOpenSideMenu} handleClickOutside={()=>setIsOpenSideMenu(prevState => !prevState)}/>
-                    </div>
-
+                    </div> */}
                     <div className="header">
                         <div className="header-big">
                             <div className="big-logo">

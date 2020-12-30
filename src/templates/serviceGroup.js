@@ -1,6 +1,6 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-//import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from "../components/layout"
 import { OfertTable, OfertTableRow} from "../components/ofertTable"
@@ -10,6 +10,13 @@ export const query = graphql`
         serviceGroupsJson(slug: { eq: $slug }) {
             name
             description
+            image {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
         }
         allServicesJson(filter: {group: {eq: $slug}}) {
             nodes {
@@ -22,19 +29,16 @@ export const query = graphql`
         }
     }
 `
-
 const serviceGroup = ({ data }) => {
     const serviceGroup = data.serviceGroupsJson
-
-    //const services = data.allServicesJson.map(node => ({...node}))
   
-    const servicesList = data.allServicesJson.nodes.map(({ name, slug }, index) => {
+    const servicesList = data.allServicesJson.nodes.map(({ name, slug, ...data }, index) => {
   
       return (
-        <OfertTableRow>
-            <Link key={index} to={`/service/${slug}`}>
-                {`${index + 1}. ${name}`}
-            </Link>
+        <OfertTableRow linkTo={`/service/${slug}`} key={`service ${slug}`}>
+                {`${name}`}
+                <span className="service-data-table">{data.prize} zł</span>
+                <span className="service-data-table">{data.time} min </span> 
         </OfertTableRow>
       )
     })
@@ -44,6 +48,9 @@ const serviceGroup = ({ data }) => {
         <Layout>
             <div className="main-container-text">
                 <h1>{serviceGroup.name}</h1>
+                <div className="services-picture">
+                    <Img style={{height: "100%"}} fluid={serviceGroup.image.childImageSharp.fluid}/>
+                </div>
                 <p>{serviceGroup.description}</p>
                 <OfertTable>
                     {servicesList}

@@ -14,7 +14,7 @@ const groupNames = (() => {
         groupNames.push({
             name: name,
             description: "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
-            image: "./image/service1.jpg",
+            image: "../../images/salon.jpg",
             slug: name.toLowerCase().replace(/\s+/g, '-')
         })
     }
@@ -36,7 +36,7 @@ const services= (() => {
                 description2: "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
                 prize: 99,
                 time: 60,
-                image:"./image/service1.jpg",
+                image:"../../images/salon.jpg",
                 slug: name.toLowerCase().replace(/\s+/g, '-')
             })
         }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-//import Img from 'gatsby-image';
+import Img from 'gatsby-image';
 
 import Layout from "../components/layout"
 
@@ -12,6 +12,13 @@ export const query = graphql`
             description2
             prize
             time
+            image {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
         }
     }
 `
@@ -24,9 +31,12 @@ const service = ({ data }) => {
         <Layout>
             <div className="main-container-text">
                 <h1>{data.name}</h1>
+                <div className="services-picture">
+                    <Img style={{height: "100%"}} fluid={data.image.childImageSharp.fluid}/>
+                </div>
                 <p>{data.description2}</p>
-                <p>prize: {data.prize}</p>
-                <p>time: {data.time}</p>
+                <span className="service-data-span"><i className="fas fa-tag"></i> {data.prize} zł</span>
+                <span className="service-data-span"><i className="far fa-clock"></i> {data.time} min </span> 
             </div>
         </Layout>
     )

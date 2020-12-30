@@ -1,11 +1,7 @@
-import React, { useEffect, useLayoutEffect } from 'react';
-
-//import './ofertTable.scss';
+import React, { useLayoutEffect } from 'react';
+import { Link } from 'gatsby';
 
 export const OfertTable = (props) => {
-    
-    //OfertTable.Row = OfertTableRow()
-
     return (
         <div className="ofert-table">
             <table>
@@ -20,54 +16,61 @@ export const OfertTable = (props) => {
 export const OfertTableRow = (props) => {
 
     const [isOpen, setIsOpen] = React.useState(false)
+    const [isContentActive, setIsContentActive] = React.useState(false)
 
     const ref = React.useRef(null)
-    //const innerContentHeight = ref.current ? ref.current.scrollHeight : null
 
-    console.log("ref is:")
-    console.log(ref.current)
-    //console.log(ref.current.scrollHeight)
     useLayoutEffect(() => {
-        const setInnerHeight = () => {
-            console.log("use effect")
-            console.log(ref.current)
-            console.log(ref.current.scrollHeight)
-            //ref.current.style.maxHeight = ref.current ? ref.current.scrollHeight : null
-
-            ref.current.style.maxHeight = `${ref.current.scrollHeight}px`
+        if (props.innerContent){
+            const setInnerHeight = () => {
+                ref.current.style.maxHeight = isOpen ? `${ref.current.scrollHeight}px` : "0px"
+            }
+            setInnerHeight()        
         }
+    },[isOpen, props.innerContent])
 
-        setInnerHeight()
-        //let height = document.querySelectorAll('[class="ofert-table-tr"]')//.scrollHeight
-    },[])
-
+    const handleClick = () => {
+        setIsOpen(prev => !prev)
+        if(!isOpen){
+            setIsContentActive(true)
+        } else {
+            const drawerTime = getComputedStyle(ref.current).transitionDuration
+            setTimeout(() => setIsContentActive(false), parseFloat(drawerTime) * 1000)
+        } 
+    }
     return (
         <>
-            {/* <tr className={`elo-class-name ${props.className}`}> */}
             <tr className={`ofert-table-tr ${props.innerContent ? "ofert-table-tr-header" : ""} ${props.className}`}>
-                <td className="ofert-table-td" style={{backgroundColor: `${props.color ? props.color : null}`}}>{/* style={{backgroundColor: props.color, padding: `10px 10px 10px ${indent ? indent : 20}px`}} */}
-                    {props.children}
-                    {props.innerContent ? 
+                <td className={`ofert-table-td`} style={{backgroundColor: `${props.color ? props.color : null}`}}>{/* style={{backgroundColor: props.color, padding: `10px 10px 10px ${indent ? indent : 20}px`}} */}
+                    <Link to={props.linkTo}>
+                        <div className="ofert-table-link">
+                            {props.children}
+                        </div>
+                    </Link>
+                </td>
+                {props.innerContent ? 
+                    <td className="drawer-button-td">
                         <button 
                             className={`drawer-button ${isOpen ? "drawer-button-rotated" : ""}`}
-                            onClick={() => setIsOpen(prev => !prev)}
-                        // ><i class="fas fa-chevron-down"></i></button>
+                            onClick={handleClick}
+                            aria-label="open drawer"
                         ><i className="fas fa-caret-down"></i></button>
-                        : null}
-                </td>
+                    </td>
+                : null}
             </tr>
-            <tr className="inner-content-tr">
-                <td className="inner-content-td">
-                    <div className={`inner-content-close ${isOpen ? "inner-content-open" : ""}`} ref={ref}>
-                        {/* { isOpen ? props.innerContent : null } */}
-                        <table className="inner-table">
-                            <tbody>
-                                {props.innerContent}
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-            </tr>
+            {props.innerContent ?
+                <tr className="inner-content-tr">
+                    <td className="inner-content-td" colSpan={2}>
+                        <div className={`inner-content-close ${isOpen ? "inner-content-open" : ""}`} ref={ref}>
+                            <table className="inner-table">
+                                <tbody>
+                                    {isContentActive ? props.innerContent : null}
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            : null}
         </>
     )
 }

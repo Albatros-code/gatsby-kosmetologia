@@ -2,31 +2,31 @@
   {
     "name": "Service group 1",
     "description": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-group-1"
   },
   {
     "name": "Service group 2",
     "description": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-group-2"
   },
   {
     "name": "Service group 3",
     "description": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-group-3"
   },
   {
     "name": "Service group 4",
     "description": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-group-4"
   },
   {
     "name": "Service group 5",
     "description": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-group-5"
   }
 ]

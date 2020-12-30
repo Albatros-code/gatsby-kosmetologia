@@ -6,7 +6,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-1-in-service-group-1"
   },
   {
@@ -16,7 +16,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-2-in-service-group-1"
   },
   {
@@ -26,7 +26,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-3-in-service-group-1"
   },
   {
@@ -36,7 +36,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-4-in-service-group-1"
   },
   {
@@ -46,7 +46,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-5-in-service-group-1"
   },
   {
@@ -56,7 +56,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-1-in-service-group-2"
   },
   {
@@ -66,7 +66,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-2-in-service-group-2"
   },
   {
@@ -76,7 +76,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-3-in-service-group-2"
   },
   {
@@ -86,7 +86,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-4-in-service-group-2"
   },
   {
@@ -96,7 +96,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-5-in-service-group-2"
   },
   {
@@ -106,7 +106,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-1-in-service-group-3"
   },
   {
@@ -116,7 +116,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-2-in-service-group-3"
   },
   {
@@ -126,7 +126,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-3-in-service-group-3"
   },
   {
@@ -136,7 +136,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-4-in-service-group-3"
   },
   {
@@ -146,7 +146,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-5-in-service-group-3"
   },
   {
@@ -156,7 +156,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-1-in-service-group-4"
   },
   {
@@ -166,7 +166,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-2-in-service-group-4"
   },
   {
@@ -176,7 +176,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-3-in-service-group-4"
   },
   {
@@ -186,7 +186,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-4-in-service-group-4"
   },
   {
@@ -196,7 +196,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-5-in-service-group-4"
   },
   {
@@ -206,7 +206,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-1-in-service-group-5"
   },
   {
@@ -216,7 +216,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-2-in-service-group-5"
   },
   {
@@ -226,7 +226,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-3-in-service-group-5"
   },
   {
@@ -236,7 +236,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-4-in-service-group-5"
   },
   {
@@ -246,7 +246,7 @@
     "description2": "Long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description, long description",
     "prize": 99,
     "time": 60,
-    "image": "./image/service1.jpg",
+    "image": "../../images/salon.jpg",
     "slug": "service-5-in-service-group-5"
   }
 ]

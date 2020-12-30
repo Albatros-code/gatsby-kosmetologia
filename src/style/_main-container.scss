@@ -1,5 +1,14 @@
 $breakpoint-container: $breakpoint-phone;
 
+.link {
+    //color: $primary-color;
+    &:hover {
+        color: $primary-color-dark
+    }
+}
+
+
+
 .main-container-text{ 
     max-width: 900px;
     margin: 0 auto;
